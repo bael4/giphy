@@ -1,0 +1,50 @@
+body{
+    background: linear-gradient(
+        90deg,
+        rgb(0, 38, 255) 0%,
+        rgb(224, 8, 8) 100%
+      );
+
+}
+
+.gifs{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gifsRandom{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.gifsRandom h1{
+   color: rgb(16, 146, 146);
+   transition: 1s ease-in-out;
+}
+.gifsRandom h1:hover{
+    color: rgba(255, 255, 255, 0);
+}
+.gifs h1{
+    color: rgb(16, 146, 146);
+    transition: 1s ease-in-out;
+    font-size: 30px;
+ }
+ .gifs h1:hover{
+     color: rgba(255, 255, 255, 0);
+ }
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
