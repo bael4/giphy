@@ -1,29 +1,26 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchGiphyTrend } from "../store/actions/giphyTrend";
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchGiphyTrend } from '../store/actions/giphyTrend'
 
-const GiphyTrend = () => {
-  const dispatch = useDispatch();
+function GiphyTrend() {
+  const dispatch = useDispatch()
 
-  const { giphyTrend } = useSelector((state) => state.giphyTrend);
-  console.log(giphyTrend);
+  const { giphyTrend } = useSelector((state) => state.giphyTrend)
+  console.log(giphyTrend)
 
   useEffect(() => {
-    dispatch(fetchGiphyTrend());
-  }, []);
+    dispatch(fetchGiphyTrend())
+  }, [])
 
   return (
     <div className="container gifs">
-      {giphyTrend?.data?.map((g, i) => {
-        return (
-          <div key={i} className="gif">
-        <img src={g?.images?.fixed_height?.url} />
-            
-          </div>
-        );
-      })}
+      {giphyTrend?.data?.map((g) => (
+        <div className="gif">
+          <img src={g?.images?.fixed_height?.url} alt="img" />
+        </div>
+      ))}
     </div>
-  );
-};
+  )
+}
 
-export default GiphyTrend;
+export default GiphyTrend

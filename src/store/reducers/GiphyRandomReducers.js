@@ -1,15 +1,16 @@
 export const ADD_GIPHY_RANDOM = ' ADD_GIPHY_RANDOM'
 const initialState = {
-    giphyRandom:{}
+  giphyRandom: {},
 }
 
-export const giphyRandomReducer = (state=initialState,action)=>{
-switch(action.type){
+// eslint-disable-next-line default-param-last
+export const giphyRandomReducer = (state = initialState, action) => {
+  switch (action.type) {
     case ADD_GIPHY_RANDOM:
-        return {...state,giphyRandom:{...action.payload}}    
+      return { ...state, giphyRandom: { ...action.payload } }
     default:
-        return state
-}
+      return state
+  }
 }
 
-export const addGiphyRandom = (payload)=>({type:ADD_GIPHY_RANDOM,payload})
+export const addGiphyRandom = (payload) => ({ type: ADD_GIPHY_RANDOM, payload })

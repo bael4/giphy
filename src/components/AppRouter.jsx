@@ -3,15 +3,13 @@ import { Route, Routes } from 'react-router-dom'
 import GiphyRandom from '../Pages/GiphyRandom'
 import GiphyTrend from '../Pages/GiphyTrend'
 
-const AppRouter = () => {
+function AppRouter() {
   return (
     <Routes>
-    <Route path={"/"} element={<GiphyTrend />} />
-    <Route path="/gg" element={<GiphyRandom />} />
-  </Routes>
+      <Route path="/" element={<GiphyTrend />} />
+      <Route path="/gg" element={<GiphyRandom />} />
+    </Routes>
   )
 }
 
 export default AppRouter
-
-
